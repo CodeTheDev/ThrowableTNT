@@ -1,0 +1,29 @@
+#    $$$$$$$$\ $$\                                                   $$\       $$\        $$$$$$$$\ $$\   $$\ $$$$$$$$\ 
+#    \__$$  __|$$ |                                                  $$ |      $$ |       \__$$  __|$$$\  $$ |\__$$  __|
+#       $$ |   $$$$$$$\   $$$$$$\   $$$$$$\  $$\  $$\  $$\  $$$$$$\  $$$$$$$\  $$ | $$$$$$\  $$ |   $$$$\ $$ |   $$ |   
+#       $$ |   $$  __$$\ $$  __$$\ $$  __$$\ $$ | $$ | $$ | \____$$\ $$  __$$\ $$ |$$  __$$\ $$ |   $$ $$\$$ |   $$ |   
+#       $$ |   $$ |  $$ |$$ |  \__|$$ /  $$ |$$ | $$ | $$ | $$$$$$$ |$$ |  $$ |$$ |$$$$$$$$ |$$ |   $$ \$$$$ |   $$ |   
+#       $$ |   $$ |  $$ |$$ |      $$ |  $$ |$$ | $$ | $$ |$$  __$$ |$$ |  $$ |$$ |$$   ____|$$ |   $$ |\$$$ |   $$ |   
+#       $$ |   $$ |  $$ |$$ |      \$$$$$$  |\$$$$$\$$$$  |\$$$$$$$ |$$$$$$$  |$$ |\$$$$$$$\ $$ |   $$ | \$$ |   $$ |   
+#       \__|   \__|  \__|\__|       \______/  \_____\____/  \_______|\_______/ \__| \_______|\__|   \__|  \__|   \__|
+#
+#                                              ~ Created by CodeError ~
+
+# Enable/disable particle trail when throwing TNT.
+particles: true
+
+# Throwing power. Cannot be less than 1. Accepts decimals.
+throwing-power: 2.5
+
+# Explosive power in radius. Cannot be less than 1. Does not accept decimals.
+explosive-power: 6
+
+# WARNING: EXPERIMENTAL FEATURE
+# Enable/disable explode on contact with ground.
+explode-on-contact: false
+
+# Enable/disable incendiary effects on detonation.
+incendiary: false
+
+# Enable/disable TNT glow effects.
+glow: false
