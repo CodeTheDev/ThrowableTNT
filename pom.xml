@@ -16,6 +16,10 @@
 			<id>spigot-repo</id>
 			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
 		</repository>
+		<repository>
+			<id>factions-repo</id>
+			<url>http://ci.ender.zone/plugin/repository/everything/</url>
+		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
@@ -23,6 +27,11 @@
 			<artifactId>spigot-api</artifactId>
 			<version>1.12.2-R0.1-SNAPSHOT</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.massivecraft</groupId>
+			<artifactId>Factions</artifactId>
+			<version>1.6.9.5-U0.5.13</version>
 		</dependency>
 	</dependencies>
 	<build>
