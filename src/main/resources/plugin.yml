@@ -1,11 +1,11 @@
 name: ThrowableTNT
 version: 1.3
-api-version: 1.12, 1.13, 1.14, 1.15
 description: A plugin that makes Minecraft TNT a throwable block.
 load: POSTWORLD
 author: CodeError
 website: https://www.codeslab.ca/
 main: net.CodeError.throwabletnt.Main
+softdepend: [Factions]
 commands:
     throwabletnt:
        description: Root command for ThrowableTNT.
