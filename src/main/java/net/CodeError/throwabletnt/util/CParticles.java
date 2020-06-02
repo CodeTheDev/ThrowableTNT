@@ -6,6 +6,12 @@ import org.bukkit.Particle;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.TNTPrimed;
 
+import com.massivecraft.factions.Board;
+import com.massivecraft.factions.FLocation;
+import com.massivecraft.factions.FPlayer;
+import com.massivecraft.factions.FPlayers;
+import com.massivecraft.factions.Faction;
+
 import net.CodeError.throwabletnt.Main;
 
 public class CParticles {
@@ -55,6 +61,22 @@ public class CParticles {
 					player.getWorld().spawnParticle(Particle.FLAME, helix1, 0);
 					player.getWorld().spawnParticle(Particle.FLAME, helix2, 0);
 
+				}
+				
+				if (Bukkit.getServer().getPluginManager().isPluginEnabled("Factions")) {
+					
+					FLocation fLoc = new FLocation(tnt.getLocation());
+					FPlayer fPlayer = FPlayers.getInstance().getByPlayer(player);
+					
+					Faction playerFac = fPlayer.getFaction();
+					Faction tntFac = Board.getInstance().getFactionAt(fLoc);
+					
+					if (tntFac.getRelationWish(playerFac).isNeutral() || tntFac.getRelationWish(playerFac).isTruce() || tntFac.getRelationWish(playerFac).isAlly() || tntFac.isSafeZone()) {
+						
+						tnt.setYield(0f);
+						
+					}
+					
 				}
 				
 				if (Main.getPlugin(Main.class).getConfig().getBoolean("explode-on-contact", true)) {
