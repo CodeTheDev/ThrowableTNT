@@ -21,14 +21,14 @@ public class Main extends JavaPlugin implements CommandExecutor {
 
 		Bukkit.getPluginManager().registerEvents(new ThrowTNT(), this);
 		this.getCommand("throwabletnt").setExecutor(this);
-		this.getLogger().info("ThrowableTNT v1.3 has been successfully enabled! Created by CodeError.");
+		this.getLogger().info("ThrowableTNT v1.4 has been successfully enabled! Created by CodeError.");
 
 	}
 
 	@Override
 	public void onDisable() {
 
-		this.getLogger().info("ThrowableTNT v1.3 has been disabled.");
+		this.getLogger().info("ThrowableTNT v1.4 has been disabled.");
 
 	}
 
@@ -43,7 +43,7 @@ public class Main extends JavaPlugin implements CommandExecutor {
 				
 			}
 			
-			sender.sendMessage(chatPrefix + ChatColor.GRAY + "This plugin makes Minecraft TNT a throwable object! " + ChatColor.GREEN + "ThrowableTNT v1.3 - Created by CodeError");
+			sender.sendMessage(chatPrefix + ChatColor.GRAY + "This plugin makes Minecraft TNT a throwable object! " + ChatColor.GREEN + "ThrowableTNT v1.4 - Created by CodeError");
 
 			return true;
 
