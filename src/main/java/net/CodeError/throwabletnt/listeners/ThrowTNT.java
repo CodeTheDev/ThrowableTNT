@@ -48,13 +48,13 @@ public class ThrowTNT implements Listener {
 			int explosivePower = Main.getPlugin(Main.class).getConfig().getInt("explosive-power", 6);
 			boolean incendiary = Main.getPlugin(Main.class).getConfig().getBoolean("incendiary", false);
 			boolean glow = Main.getPlugin(Main.class).getConfig().getBoolean("glow", false);
-			
-			new CParticles(player, tnt).startHelix();
 
 			tnt.setVelocity(playerDirection.multiply(throwingPower + 0D));
 			tnt.setYield(explosivePower + 0f);
 			tnt.setIsIncendiary(incendiary);
 			tnt.setGlowing(glow);
+			
+			new CParticles(player, tnt).startHelix();
 
 		}
 
