@@ -21,6 +21,15 @@ public class Main extends JavaPlugin implements CommandExecutor {
 
 		Bukkit.getPluginManager().registerEvents(new ThrowTNT(), this);
 		this.getCommand("throwabletnt").setExecutor(this);
+		
+		if (Bukkit.getServer().getPluginManager().getPlugin("Factions") != null) {
+			
+			this.getLogger().info("Factions plugin has been detected!");
+			this.getLogger().info("Hooking into Factions API...");
+			this.getLogger().info("Successfully hooked into Factions API! Factions Anti-Grief has been enabled!");
+			
+		}
+		
 		this.getLogger().info("ThrowableTNT v1.4 has been successfully enabled! Created by CodeError.");
 
 	}
@@ -28,6 +37,13 @@ public class Main extends JavaPlugin implements CommandExecutor {
 	@Override
 	public void onDisable() {
 
+		if (Bukkit.getServer().getPluginManager().getPlugin("Factions") != null) {
+			
+			this.getLogger().info("Unhooking from Factions API...");
+			this.getLogger().info("Successfully unhooked from Factions API.");
+			
+		}
+		
 		this.getLogger().info("ThrowableTNT v1.4 has been disabled.");
 
 	}
