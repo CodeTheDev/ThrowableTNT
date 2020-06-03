@@ -71,9 +71,17 @@ public class CParticles {
 					Faction playerFac = fPlayer.getFaction();
 					Faction tntFac = Board.getInstance().getFactionAt(fLoc);
 					
-					if (tntFac.getRelationWish(playerFac).isNeutral() || tntFac.getRelationWish(playerFac).isTruce() || tntFac.getRelationWish(playerFac).isAlly() || tntFac.isSafeZone()) {
+					int explosivePower = Main.getPlugin(Main.class).getConfig().getInt("explosive-power", 6);
+					
+					if (playerFac.getRelationWish(tntFac).isNeutral() || playerFac.getRelationWish(tntFac).isAlly() || playerFac.getRelationWish(tntFac).isTruce() || tntFac.isSafeZone()) {
 						
 						tnt.setYield(0f);
+						
+					}
+					
+					else {
+						
+						tnt.setYield(explosivePower + 0f);
 						
 					}
 					
