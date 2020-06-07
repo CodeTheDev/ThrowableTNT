@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.CodeError</groupId>
 	<artifactId>ThrowableTNT</artifactId>
-	<version>1.4</version>
+	<version>1.4.1</version>
 	<name>ThrowableTNT</name>
 	<description>A plugin that makes Minecraft TNT a throwable block.</description>
 	<properties>

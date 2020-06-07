@@ -31,7 +31,7 @@ public class Main extends JavaPlugin implements CommandExecutor {
 			
 		}
 		
-		this.getLogger().info("ThrowableTNT v1.4 has been successfully enabled! Created by CodeError.");
+		this.getLogger().info("ThrowableTNT v1.4.1 has been successfully enabled! Created by CodeError.");
 
 	}
 
@@ -45,7 +45,7 @@ public class Main extends JavaPlugin implements CommandExecutor {
 			
 		}
 		
-		this.getLogger().info("ThrowableTNT v1.4 has been disabled.");
+		this.getLogger().info("ThrowableTNT v1.4.1 has been disabled.");
 
 	}
 
@@ -60,7 +60,7 @@ public class Main extends JavaPlugin implements CommandExecutor {
 				
 			}
 			
-			sender.sendMessage(chatPrefix + ChatColor.GRAY + "This plugin makes Minecraft TNT a throwable object! " + ChatColor.GREEN + "ThrowableTNT v1.4 - Created by CodeError");
+			sender.sendMessage(chatPrefix + ChatColor.GRAY + "This plugin makes Minecraft TNT a throwable object! " + ChatColor.GREEN + "ThrowableTNT v1.4.1 - Created by CodeError");
 
 			return true;
 
