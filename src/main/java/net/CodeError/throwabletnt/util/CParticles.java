@@ -12,7 +12,7 @@ import com.massivecraft.factions.FPlayer;
 import com.massivecraft.factions.FPlayers;
 import com.massivecraft.factions.Faction;
 
-import net.CodeError.throwabletnt.Main;
+import net.CodeError.throwabletnt.ThrowableTNT;
 
 public class CParticles {
 
@@ -29,7 +29,7 @@ public class CParticles {
 
 	public void startHelix() {
 
-		task = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(Main.class), new Runnable() {
+		task = Bukkit.getScheduler().scheduleSyncRepeatingTask(ThrowableTNT.getPlugin(ThrowableTNT.class), new Runnable() {
 
 			double myPain;
 			Location helix1, helix2;
@@ -38,7 +38,7 @@ public class CParticles {
 			@Override
 			public void run() {
 
-				if (Main.getPlugin(Main.class).getConfig().getBoolean("particles", true)) {
+				if (ThrowableTNT.getPlugin(ThrowableTNT.class).getConfig().getBoolean("particles", true)) {
 
 					if (!particleManager.hasID()) { 
 
@@ -71,7 +71,7 @@ public class CParticles {
 					Faction playerFac = fPlayer.getFaction();
 					Faction tntFac = Board.getInstance().getFactionAt(fLoc);
 					
-					int explosivePower = Main.getPlugin(Main.class).getConfig().getInt("explosive-power", 6);
+					int explosivePower = ThrowableTNT.getPlugin(ThrowableTNT.class).getConfig().getInt("explosive-power", 6);
 					
 					if (playerFac.getRelationWish(tntFac).isNeutral() || playerFac.getRelationWish(tntFac).isAlly() || playerFac.getRelationWish(tntFac).isTruce() || tntFac.isSafeZone()) {
 						
@@ -87,7 +87,7 @@ public class CParticles {
 					
 				}
 				
-				if (Main.getPlugin(Main.class).getConfig().getBoolean("explode-on-contact", true)) {
+				if (ThrowableTNT.getPlugin(ThrowableTNT.class).getConfig().getBoolean("explode-on-contact", true)) {
 					
 					if (tnt.isOnGround()) {
 

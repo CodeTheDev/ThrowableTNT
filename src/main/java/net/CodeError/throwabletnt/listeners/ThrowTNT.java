@@ -12,7 +12,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
 
-import net.CodeError.throwabletnt.Main;
+import net.CodeError.throwabletnt.ThrowableTNT;
 import net.CodeError.throwabletnt.util.CParticles;
 
 public class ThrowTNT implements Listener {
@@ -44,10 +44,10 @@ public class ThrowTNT implements Listener {
 
 			TNTPrimed tnt = (TNTPrimed) world.spawn(player.getLocation().add(0.0, 1, 0.0), TNTPrimed.class);
 			Vector playerDirection = player.getLocation().getDirection();
-			double throwingPower = Main.getPlugin(Main.class).getConfig().getDouble("throwing-power", 2.5);
-			int explosivePower = Main.getPlugin(Main.class).getConfig().getInt("explosive-power", 6);
-			boolean incendiary = Main.getPlugin(Main.class).getConfig().getBoolean("incendiary", false);
-			boolean glow = Main.getPlugin(Main.class).getConfig().getBoolean("glow", false);
+			double throwingPower = ThrowableTNT.getPlugin(ThrowableTNT.class).getConfig().getDouble("throwing-power", 2.5);
+			int explosivePower = ThrowableTNT.getPlugin(ThrowableTNT.class).getConfig().getInt("explosive-power", 6);
+			boolean incendiary = ThrowableTNT.getPlugin(ThrowableTNT.class).getConfig().getBoolean("incendiary", false);
+			boolean glow = ThrowableTNT.getPlugin(ThrowableTNT.class).getConfig().getBoolean("glow", false);
 
 			tnt.setVelocity(playerDirection.multiply(throwingPower + 0D));
 			tnt.setYield(explosivePower + 0f);
