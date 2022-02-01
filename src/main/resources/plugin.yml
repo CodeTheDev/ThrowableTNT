@@ -1,5 +1,5 @@
 name: ThrowableTNT
-version: 1.4.1
+version: 1.4.2
 description: A plugin that makes Minecraft TNT a throwable block.
 load: POSTWORLD
 author: CodeError
