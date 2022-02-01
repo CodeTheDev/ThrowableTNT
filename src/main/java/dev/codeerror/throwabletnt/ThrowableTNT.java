@@ -14,20 +14,20 @@ import dev.codeerror.throwabletnt.listeners.ThrowTNT;
 public class ThrowableTNT extends JavaPlugin implements CommandExecutor {
 	
 	private static final String chatPrefix = ChatColor.RED + "[" + ChatColor.WHITE + "ThrowableTNT" + ChatColor.RED + "] ";
+	public static boolean hasFactions = false;
 
 	@Override
 	public void onEnable() {
 
 		this.saveDefaultConfig();
+		
+		if (Bukkit.getServer().getPluginManager().getPlugin("Factions").isEnabled()) {
+			hasFactions = true;
+			this.getLogger().info("Factions plugin detected! Anti-Grief safeguards enabled!");
+		}
 
 		Bukkit.getPluginManager().registerEvents(new ThrowTNT(), this);
 		this.getCommand("throwabletnt").setExecutor(this);
-		
-		if (Bukkit.getServer().getPluginManager().getPlugin("Factions") != null) {
-			this.getLogger().info("Factions plugin has been detected!");
-			this.getLogger().info("Hooking into Factions API...");
-			this.getLogger().info("Successfully hooked into Factions API! Factions Anti-Grief has been enabled!");
-		}
 		
 		this.getLogger().info("ThrowableTNT v1.4.1 has been successfully enabled! Created by CodeError.");
 
@@ -35,14 +35,7 @@ public class ThrowableTNT extends JavaPlugin implements CommandExecutor {
 
 	@Override
 	public void onDisable() {
-
-		if (Bukkit.getServer().getPluginManager().getPlugin("Factions") != null) {
-			this.getLogger().info("Unhooking from Factions API...");
-			this.getLogger().info("Successfully unhooked from Factions API.");
-		}
-		
 		this.getLogger().info("ThrowableTNT v1.4.1 has been disabled.");
-
 	}
 
 	@Override

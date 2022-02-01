@@ -54,7 +54,7 @@ public class CParticles {
 
 				}
 				
-				if (Bukkit.getServer().getPluginManager().isPluginEnabled("Factions")) {
+				if (ThrowableTNT.hasFactions) {
 
 					FLocation fLoc = new FLocation(tnt.getLocation());
 					FPlayer fPlayer = FPlayers.getInstance().getByPlayer(player);
