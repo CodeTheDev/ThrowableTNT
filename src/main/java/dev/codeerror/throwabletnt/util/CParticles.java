@@ -20,42 +20,34 @@ public class CParticles {
 	private final TNTPrimed tnt;
 
 	public CParticles(Player player, TNTPrimed tnt) {
-
 		this.player = player;
 		this.tnt = tnt;
-
 	}
 
 	public void startHelix() {
 
 		task = Bukkit.getScheduler().scheduleSyncRepeatingTask(ThrowableTNT.getPlugin(ThrowableTNT.class), new Runnable() {
 
-			double myPain;
+			double particles;
 			Location helix1, helix2;
-			ParticleManager particleManager = new ParticleManager(player.getUniqueId());
+			final ParticleManager particleManager = new ParticleManager(player.getUniqueId());
 
 			@Override
 			public void run() {
 
 				if (ThrowableTNT.getPlugin(ThrowableTNT.class).getConfig().getBoolean("particles", true)) {
 
-					if (!particleManager.hasID()) { 
-
-						particleManager.setID(task);
-
-					}
+					if (!particleManager.hasID()) particleManager.setID(task);
 
 					if (tnt.isDead()) {
-
 						particleManager.endTask();
 						particleManager.removeID();
-
 					}
 
-					myPain += Math.PI / 16;
+					particles += Math.PI / 16;
 
-					helix1 = tnt.getLocation().clone().add(Math.cos(myPain), Math.sin(myPain) + 0.5, Math.sin(myPain));
-					helix2 = tnt.getLocation().clone().add(Math.cos(myPain + Math.PI), Math.sin(myPain) + 0.5, Math.sin(myPain + Math.PI));
+					helix1 = tnt.getLocation().clone().add(Math.cos(particles), Math.sin(particles) + 0.5, Math.sin(particles));
+					helix2 = tnt.getLocation().clone().add(Math.cos(particles + Math.PI), Math.sin(particles) + 0.5, Math.sin(particles + Math.PI));
 
 					player.getWorld().spawnParticle(Particle.FLAME, helix1, 0);
 					player.getWorld().spawnParticle(Particle.FLAME, helix2, 0);
@@ -63,37 +55,24 @@ public class CParticles {
 				}
 				
 				if (Bukkit.getServer().getPluginManager().isPluginEnabled("Factions")) {
-					
+
 					FLocation fLoc = new FLocation(tnt.getLocation());
 					FPlayer fPlayer = FPlayers.getInstance().getByPlayer(player);
-					
 					Faction playerFac = fPlayer.getFaction();
 					Faction tntFac = Board.getInstance().getFactionAt(fLoc);
 					
 					int explosivePower = ThrowableTNT.getPlugin(ThrowableTNT.class).getConfig().getInt("explosive-power", 6);
 					
 					if (playerFac.getRelationWish(tntFac).isNeutral() || playerFac.getRelationWish(tntFac).isAlly() || playerFac.getRelationWish(tntFac).isTruce() || tntFac.isSafeZone()) {
-						
 						tnt.setYield(0f);
-						
-					}
-					
-					else {
-						
+					} else {
 						tnt.setYield(explosivePower + 0f);
-						
 					}
-					
+
 				}
 				
 				if (ThrowableTNT.getPlugin(ThrowableTNT.class).getConfig().getBoolean("explode-on-contact", true)) {
-					
-					if (tnt.isOnGround()) {
-
-						tnt.setFuseTicks(0);
-
-					}
-					
+					if (tnt.isOnGround()) tnt.setFuseTicks(0);
 				}
 
 			}
