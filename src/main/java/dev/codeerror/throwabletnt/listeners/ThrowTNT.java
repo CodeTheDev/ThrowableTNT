@@ -1,5 +1,7 @@
-package net.CodeError.throwabletnt.listeners;
+package dev.codeerror.throwabletnt.listeners;
 
+import dev.codeerror.throwabletnt.ThrowableTNT;
+import dev.codeerror.throwabletnt.util.CParticles;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -11,9 +13,6 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
-
-import net.CodeError.throwabletnt.ThrowableTNT;
-import net.CodeError.throwabletnt.util.CParticles;
 
 public class ThrowTNT implements Listener {
 

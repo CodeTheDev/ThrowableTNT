@@ -1,4 +1,4 @@
-package net.CodeError.throwabletnt.util;
+package dev.codeerror.throwabletnt.util;
 
 import java.util.HashMap;
 import java.util.UUID;

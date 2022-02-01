@@ -1,5 +1,6 @@
-package net.CodeError.throwabletnt.util;
+package dev.codeerror.throwabletnt.util;
 
+import dev.codeerror.throwabletnt.ThrowableTNT;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Particle;
@@ -11,8 +12,6 @@ import com.massivecraft.factions.FLocation;
 import com.massivecraft.factions.FPlayer;
 import com.massivecraft.factions.FPlayers;
 import com.massivecraft.factions.Faction;
-
-import net.CodeError.throwabletnt.ThrowableTNT;
 
 public class CParticles {
 

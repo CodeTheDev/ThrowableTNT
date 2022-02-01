@@ -3,8 +3,8 @@ version: 1.4.1
 description: A plugin that makes Minecraft TNT a throwable block.
 load: POSTWORLD
 author: CodeError
-website: https://www.codeslab.ca/
-main: net.CodeError.throwabletnt.ThrowableTNT
+website: https://codeerror.dev/
+main: dev.codeerror.throwabletnt.ThrowableTNT
 softdepend: [Factions]
 commands:
     throwabletnt:

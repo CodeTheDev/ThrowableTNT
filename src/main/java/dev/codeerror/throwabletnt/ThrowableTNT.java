@@ -1,4 +1,4 @@
-package net.CodeError.throwabletnt;
+package dev.codeerror.throwabletnt;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -9,7 +9,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import net.CodeError.throwabletnt.listeners.ThrowTNT;
+import dev.codeerror.throwabletnt.listeners.ThrowTNT;
 
 public class ThrowableTNT extends JavaPlugin implements CommandExecutor {
 	
