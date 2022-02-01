@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>net.CodeError</groupId>
+	<groupId>dev.codeerror</groupId>
 	<artifactId>ThrowableTNT</artifactId>
 	<version>1.4.1</version>
 	<name>ThrowableTNT</name>
@@ -18,7 +18,7 @@
 		</repository>
 		<repository>
 			<id>factions-repo</id>
-			<url>http://ci.ender.zone/plugin/repository/everything/</url>
+			<url>https://ci.ender.zone/plugin/repository/everything/</url>
 		</repository>
 	</repositories>
 	<dependencies>
@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>com.massivecraft</groupId>
 			<artifactId>Factions</artifactId>
-			<version>1.6.9.5-U0.5.13</version>
+			<version>1.6.9.5-U0.6.6</version>
 		</dependency>
 	</dependencies>
 	<build>
