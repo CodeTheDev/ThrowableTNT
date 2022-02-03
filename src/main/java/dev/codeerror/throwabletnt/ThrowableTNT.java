@@ -21,7 +21,7 @@ public class ThrowableTNT extends JavaPlugin implements CommandExecutor {
 
 		this.saveDefaultConfig();
 		
-		if (Bukkit.getServer().getPluginManager().getPlugin("Factions").isEnabled()) {
+		if (Bukkit.getServer().getPluginManager().isPluginEnabled("Factions")) {
 			hasFactions = true;
 			this.getLogger().info("Factions plugin detected! Anti-Grief safeguards enabled!");
 		}
