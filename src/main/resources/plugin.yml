@@ -5,6 +5,7 @@ load: POSTWORLD
 author: CodeError
 website: https://codeerror.dev/
 main: dev.codeerror.throwabletnt.ThrowableTNT
+api-version: 1.13
 softdepend: [Factions]
 commands:
     throwabletnt:
